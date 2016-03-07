@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SONORSOCIAL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+
+
+
+<body >
+
+ <!--      NAV TAB -->
+  <nav class="navbar navbar-inverse"  role="navigation">
+  <div class="container-fluid" >
+          <a class="navbar-brand" data-toggle="tab" href="#menuHome">SONORSOCIAL</a>
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="navbar-header">
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+        <li class="active"><a data-toggle="tab" href="#menuHome">Home</a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuración
+          <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a data-toggle="tab" href="#menuHist">Historico</a></li>
+            <li><a data-toggle="tab" href="#menuTiempo">Tiempo Real</a></li>
+            <li><a data-toggle="tab" href="#">Opción mierda nº3</a></li> 
+          </ul>
+        </li>
+        <li><a data-toggle="tab" href="#menuContacto">Contacto</a></li> 
+        <li><a data-toggle="tab" href="#menuAyuda">Ayuda</a></li> 
+      </ul>
+
+      <h3 id="user" class= "collapse" ></h3>    <!-- Etiqueta Bienvenido Usuario -->
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a data-toggle="collapse" data-target="#Registrate"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+        <li><a data-toggle="collapse" data-target="#Entra"><span class="glyphicon glyphicon-log-in"></span> Entra</a></li>
+      </ul>
+  </div>
+</div>
+</nav>
+ 
+ <!--      FORMULARIO ENTRAR COLLAPSABLE -->
+
+<div id="Entra" class="collapse">
+ <div class="pull-right">
+  <div class="col-md-3"  >
+    <form role="form" method="get" id=formulario >
+      <div  class="form-group">
+       <label style="width:200px;" for="name">Usuario:</label>
+       <input  type="name" class="form-control" id="name" required >
+     </div>
+     <div class="form-group" >
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" required>
+     </div>
+   
+         <button type="submit" class="btn btn-success" id="demo" data-toggle="collapse" data-target="#Entra" onclick="javascript:entrar();">Enviar</button> 
+    </form>
+</div>
+</div>
+</div>
+
+
+
+
+
+   <!--    SCRIPT  FORMULARIO ENTRAR COLLAPSABLE -->
+<script>
+function entrar() {
+var name= document.forms["formulario"];
+document.getElementById("user").innerHTML ="Bienvenidoo "+name.elements[0].value;
+
+$('#user').collapse("show");
+}
+</script>
+
+ <!--      FORMULARIO REGISTRAR COLLAPSABLE -->
+
+<div id="Registrate" class="collapse">
+ <div class="pull-right">
+  <div class="col-md-3"  >
+    <form role="form" >
+      <div  class="form-group">
+       <label style="width:200px;" for="email">Email address:</label>
+       <input  type="email" class="form-control" id="email" required>
+     </div>
+     <div class="form-group" >
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" required>
+      <label for="pwd">Confirm Password:</label>
+      <input type="password" class="form-control" id="pwd" required>
+     </div>
+      <button type="submit" class="btn btn-success">Submit</button> 
+    </form>
+</div>
+</div>
+</div>
+
+
+ <!--      WEB MAIN -->
+<div class="col-md-9 text-justify" >
+      
+        <div class="tab-content">
+        </hr>
+    <div id="menuHome" class="tab-pane fade in active">
+      <h2 class="text-center">HOME</h2><br/>
+      <p><tr>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat,  nostrud exercitation ullamco. </p>
+    </div>
+    <div id="menuAyuda" class="tab-pane fade">
+      <h2 class="text-center">Sobre nosotros</h2><br/>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat,  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+    </div>
+    <div id="menuHist" class="tab-pane fade">
+      
+      <h2 class="text-center">Historico</h2><br/>
+      <div class="col-md-2" >
+
+      </div>
+      <div class="col-md-6" >
+      <iframe src="grafics.html" name="iframe_a" width="1280px" height="700px"></iframe>
+      </div>
+    </div>
+    
+    <div id="menuContacto" class="tab-pane fade">
+      <h2 class="text-center">Contacto</h2><br/>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+
+     <div id="menuRegis" class="tab-pane fade">
+      <h2 class="text-center">Regitro</h2><br/>
+      <p>Miau miauuu miauuu.</p>
+    </div>
+    
+   <div id="menuEntra" class="tab-pane fade">
+      <h2 class="text-center">Entra</h2><br/>
+      <p>Que entres!!!!</p>
+    </div>
+    
+
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+</html>

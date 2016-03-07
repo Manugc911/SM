@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ 
+<div class="container-fluid text-center">    
+  <div class="row content">
+
+    <div class="col-sm-5 text-center"> 
+      <br><h1>Lq(dBA)</h1>
+	  <p>DÍA</p>
+	  
+	  <script src="js/Chart.js"></script>
+<div id="canvas-holder">
+<canvas id="chart-area3" width="400" height="200"></canvas>
+<br><br><p>SEMANA</p><br>
+<canvas id="chart-area2" width="400" height="200"></canvas>
+</div>
+<script>
+
+		var lineChartData = {
+			labels : ["10:30","11:00","11:30","12:00","12:30","13:00","13:30","10:30","11:00","11:30","12:00"],
+			datasets : [
+				{
+					label: "Primera serie de datos",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "#6b9dfa",
+					pointColor : "#1e45d7",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [90,30,10,80,15,5,90,30,10,80]
+				},
+				
+			]
+
+		}
+
+var ctx3 = document.getElementById("chart-area3").getContext("2d");
+				
+window.myPie = new Chart(ctx3).Line(lineChartData, {responsive:true});
+
+</script>
+
+	  <script>
+
+		var lineChartData = {
+			labels : ["10:30","11:00","11:30","12:00","12:30","13:00","13:30","10:30","11:00","11:30","12:00","12:30","13:00","13:30"],
+			datasets : [
+				{
+					label: "Primera serie de datos",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "#6b9dfa",
+					pointColor : "#1e45d7",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [51,20,3,80,15,5,75,30,10,80,15,5,15]
+				},
+				
+			]
+
+		}
+
+var ctx2 = document.getElementById("chart-area2").getContext("2d");
+				
+window.myPie = new Chart(ctx2).Line(lineChartData, {responsive:true});
+
+</script>
+    </div>
+
+
+<div class="col-sm-5">
+<br><h1>Lmax(dBA)</h1>
+	  <p>DÍA</p>
+
+
+	  <script src="/js/Chart.js"></script>
+<div id="canvas-holder">
+<canvas id="chart-area" width="400" height="200"></canvas>
+<br><br><p>SEMANA</p><br>
+<canvas id="chart-area4" width="400" height="200"></canvas>
+</div>
+<script>
+
+	var barChartData = {
+		labels : ["10:30","11:00","11:30","12:00","12:30","13:00","13:30","10:30","11:00","11:30","12:00"],
+		datasets : [
+			{
+				fillColor : "#6b9dfa",
+				strokeColor : "#ffffff",
+				highlightFill: "#1864f2",
+				highlightStroke: "#ffffff",
+				data : [0,0,0,0,0,0,0,80,0,0,0]
+			},
+			
+		]
+
+	}	
+
+var ctx = document.getElementById("chart-area").getContext("2d");
+				
+window.myPie = new Chart(ctx).Bar(barChartData, {responsive:true});
+
+</script>
+<script>
+
+	var barChartData = {
+		labels : ["10:30","11:00","11:30","12:00","12:30","13:00","13:30","10:30","11:00","11:30","12:00"],
+		datasets : [
+			{
+				fillColor : "#6b9dfa",
+				strokeColor : "#ffffff",
+				highlightFill: "#1864f2",
+				highlightStroke: "#ffffff",
+				data : [90,30,10,80,15,5,15,90,30,10,80]
+			},
+			
+		]
+
+	}	
+
+var ctx4 = document.getElementById("chart-area4").getContext("2d");
+				
+window.myPie = new Chart(ctx4).Bar(barChartData, {responsive:true});
+
+</script>
+
+</div>
+<div class="col-sm-2">
+</div>
+</div>
+</div>
+</body>
+</html>
